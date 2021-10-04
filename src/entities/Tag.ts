@@ -21,7 +21,7 @@ class Tag {
     created_at: Date
 
     @UpdateDateColumn()
-    Updated_at: Date
+    updated_at: Date
 
     @Expose({ name: "nameCustom"})
     nameCustom(): String {
