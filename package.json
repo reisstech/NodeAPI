@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
+    "test": "NODE_ENV=test jest",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "D": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.4.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "expresss": "^0.0.0",

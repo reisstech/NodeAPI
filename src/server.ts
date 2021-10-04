@@ -1,3 +1,7 @@
+require('dotenv').config({
+    path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env'
+})
+
 import "reflect-metadata"
 import express from "express"
 import { Request, Response, NextFunction } from "express"
