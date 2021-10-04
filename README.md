@@ -1,1 +1,1 @@
-- server > routes . controller > service
+API REST em NodeJS, TypeScript, TypeORM e PostgreSQL
