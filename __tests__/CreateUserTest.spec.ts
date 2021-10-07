@@ -31,28 +31,6 @@ describe("Create User", () => {
 
         expect(response.body).toHaveProperty('id')
 
-        // const createUserServiceTest = new CreateUserService()
-         
-    
-        // const user = { 
-        //     name: "Usuario Teste",
-        //     email: "jest-test@testmail.com.br",
-        //     password: '12345',
-        // }
-
-        // await createUserServiceTest.execute(user)
-
-        // const usersRepository = getCustomRepository(UsersRepositories)
-
-
-        // const confirmUserCreated = await usersRepository.findOne({
-        //     email: user.email
-        // })
-      
-
-        // expect(confirmUserCreated).toHaveProperty('id')
-
-        
 
     })
 

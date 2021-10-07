@@ -18,19 +18,21 @@ export function ensureAuthenticated(
         return response.status(401).end()
     }
 
-    console.log(authToken)
     const [, token] = authToken.split(" ")
+   
 
     try {
 
-        const { sub } = verify( token, "993987fa737ef7d49d539f592aa196185e35b71b") as IPayload
+        const { sub }  = verify( token, "993987fa737ef7d49d539f592aa196185e35b71b") as IPayload
 
         request.user_id = sub
 
         return next()
         
     } catch (err) {
+        
         return response.status(401).end()
+        
     }
     
 

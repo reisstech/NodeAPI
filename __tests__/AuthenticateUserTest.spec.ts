@@ -31,7 +31,7 @@ describe("Authenticated", () => {
             password: '12345'
         }
 
-        const response = await request(app).post('/users').send({
+       await request(app).post('/users').send({
             name: user.name,
             email: user.email,
             password: user.password
@@ -45,22 +45,6 @@ describe("Authenticated", () => {
         })
         
         expect(userAuthenticatedToken.body).toHaveProperty('token')
-        
 
-
-        // const createUserServiceTest = new CreateUserService
-
-        // const user = { 
-        //     name: "Usuario Teste",
-        //     email: "jest-test@testmail.com.br",
-        //     password: '12345',
-        // }
-
-        // const usuarioCriado = await createUserServiceTest.execute(user)
-
-
-        // expect(usuarioCriado).toHaveProperty('id')
-
-    
     })
 })
