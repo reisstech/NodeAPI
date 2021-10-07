@@ -1,4 +1,4 @@
-import { getCustomRepository } from "typeorm"
+import { Connection, getCustomRepository } from "typeorm"
 import { UsersRepositories } from "../repositories/UsersRepositories"
 import { compare } from "bcryptjs"
 import { sign } from "jsonwebtoken"
@@ -8,6 +8,7 @@ interface IAuthenticateRequest {
     email: string
     password: string
 }
+
 
 
 
@@ -28,8 +29,8 @@ class AuthenticateUserService {
 
         if(!passwordMatch) {
             throw new Error("Email and Password incorrect!")
-        }
-
+        }       
+        
         const token = sign(
             {
                 email: user.email,
@@ -40,6 +41,7 @@ class AuthenticateUserService {
                 expiresIn: "1d"
             }
         )
+
 
         return token
 

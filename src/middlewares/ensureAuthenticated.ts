@@ -18,6 +18,7 @@ export function ensureAuthenticated(
         return response.status(401).end()
     }
 
+    console.log(authToken)
     const [, token] = authToken.split(" ")
 
     try {
