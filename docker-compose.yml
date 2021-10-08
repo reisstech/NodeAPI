@@ -1,20 +1,20 @@
-version: '3.7'
+# version: '3.7'
 
-services:
-  api:
-    build: .
-    volumes: 
-      - /home/rodrigo/NodeAPI:/app
-    ports: 
-      - "49160:3000"
-    depends_on: 
-      - postgres
+# services:
+#   api:
+#     build: .
+#     volumes: 
+#       - /home/rodrigo/NodeAPI:/app
+#     ports: 
+#       - "49160:3000"
+#     depends_on: 
+#       - postgres
 
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_PASSWORD: "postgres"
-    ports:
-      - "5432:5432"
-    volumes:
-      - /home/rodrigo/db_postgresql:/var/lib/postgresql/data
+#   postgres:
+#     image: postgres
+#     environment:
+#       POSTGRES_PASSWORD: "postgres"
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - /home/rodrigo/db_postgresql:/var/lib/postgresql/data
