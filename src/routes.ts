@@ -1,3 +1,4 @@
+import { Request, Response} from "express"
 import { Router } from "express"
 import { CreateUserController } from "./controllers/CreateUserController"
 import { CreateTagController } from "./controllers/CreateTagController"
@@ -23,6 +24,12 @@ const listUserReceiveComplimentsController = new ListUserReceiveComplimentsContr
 const listTagsController = new ListTagsController()
 const listUsersController = new ListUsersController()
 
+
+//Rota de teste
+
+router.get('/', (request: Request, response: Response) => {
+    response.send('Hello World')
+})
 
 router.post("/users", createUserController.handle)
 router.post("/tags", ensureAuthenticated, ensureAdmin, createTagController.handle)

@@ -30,17 +30,18 @@ class CreateUserService {
 
        const passwordHash = await hash(password, 8)
        
-       const user = usersRepository.create({ 
-           name,
-           email,
-           admin,
-           password: passwordHash,
-       })
+      
+        const user = usersRepository.create({ 
+            name,
+            email,
+            admin,
+            password: passwordHash,
+        })
+ 
 
        await usersRepository.save(user)
 
        return user
-
 
     }
 
