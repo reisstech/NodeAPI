@@ -29,7 +29,7 @@ describe("Create User", () => {
             password: '12345',
         })
 
-        expect(response.body).toHaveProperty('id')
+        expect(response.body).toHaveProperty('endereco')
 
 
     })
