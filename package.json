@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev src/server.ts --ignore __tests__",
     "test": "NODE_ENV=test jest",
+    "build": "tsc",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
