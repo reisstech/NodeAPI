@@ -28,7 +28,7 @@ const listUsersController = new ListUsersController()
 //Rota de teste
 
 router.get('/', (request: Request, response: Response) => {
-    response.send('Hello World')
+    response.send('Hello Beautiful World')
 })
 
 router.post("/users", createUserController.handle)
