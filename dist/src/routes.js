@@ -24,7 +24,7 @@ var listTagsController = new ListTagsController_1.ListTagsController();
 var listUsersController = new ListUsersController_1.ListUsersController();
 //Rota de teste
 router.get('/', function (request, response) {
-    response.send('Hello World');
+    response.send('Hello Beautiful World');
 });
 router.post("/users", createUserController.handle);
 router.post("/tags", ensureAuthenticated_1.ensureAuthenticated, ensureAdmin_1.ensureAdmin, createTagController.handle);
