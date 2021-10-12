@@ -8,8 +8,8 @@ module.exports = {
     // "password": "",
     // "database": "",
 
-    "migrations": process.env.NODE_ENV === 'local' ? ["src/database/migrations/*.ts"] : ["dist/src/database/migrations/*.ts"],
-    "entities": process.env.NODE_ENV === 'local' ? ["src/entities/*.ts"] : ["dist/src/entities/*.js"],
+    "migrations": process.env.NODE_DBENV === 'local' ? ["src/database/migrations/*.ts"] : ["dist/src/database/migrations/*.ts"],
+    "entities": process.env.NODE_DBENV === 'local' ? ["src/entities/*.ts"] : ["dist/src/entities/*.js"],
 
 
     "cli": {
