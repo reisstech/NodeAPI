@@ -1,4 +1,4 @@
-# API REST em NodeJs usando Express com testes unitário e deploy automático no Heroku.
+# API REST em NodeJs usando Express com teste unitário e deploy automático no Heroku.
 
 API Rest desenvolvida no evento NLW da Rocketseat.
 
@@ -83,3 +83,11 @@ CMD ["yarn", "dev"]
 
 
 ```
+
+Para executar os testes unitários:
+
+```
+yarn test
+```
+
+
