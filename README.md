@@ -61,7 +61,7 @@ services:
 Rodar o comando abaixo na raiz do projeto. (É necessário ter o Docker Compose instalado) 
 
 ```
-docker-compose up -d docker-compose.yml
+docker-compose up -d
 ```
 Conforme especificado no docker-compose.yml, o Docker irá buildar a imagem do Node usando o arquivo Dockerfile abaixo:
 
