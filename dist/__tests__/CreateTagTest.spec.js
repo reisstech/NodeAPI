@@ -41,6 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var globals_1 = require("@jest/globals");
 var database_1 = __importDefault(require("../src/database"));
+var typeorm_1 = require("typeorm");
 var supertest_1 = __importDefault(require("supertest"));
 var app_1 = require("../src/app");
 (0, globals_1.describe)("Create Tag", function () {
@@ -52,6 +53,20 @@ var app_1 = require("../src/app");
                 case 1:
                     connection = _a.sent();
                     return [4 /*yield*/, connection.runMigrations()];
+                case 2:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+    (0, globals_1.afterAll)(function () { return __awaiter(void 0, void 0, void 0, function () {
+        var connection;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, (0, typeorm_1.getConnection)()];
+                case 1:
+                    connection = _a.sent();
+                    return [4 /*yield*/, connection.dropDatabase()];
                 case 2:
                     _a.sent();
                     return [2 /*return*/];

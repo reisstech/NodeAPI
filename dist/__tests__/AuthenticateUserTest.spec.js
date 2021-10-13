@@ -43,6 +43,7 @@ var globals_1 = require("@jest/globals");
 var index_1 = __importDefault(require("../src/database/index"));
 var supertest_1 = __importDefault(require("supertest"));
 var app_1 = require("../src/app");
+var typeorm_1 = require("typeorm");
 (0, globals_1.describe)("Authenticated", function () {
     (0, globals_1.beforeAll)(function () { return __awaiter(void 0, void 0, void 0, function () {
         var connection;
@@ -52,6 +53,20 @@ var app_1 = require("../src/app");
                 case 1:
                     connection = _a.sent();
                     return [4 /*yield*/, connection.runMigrations()];
+                case 2:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+    (0, globals_1.afterAll)(function () { return __awaiter(void 0, void 0, void 0, function () {
+        var connection;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, (0, typeorm_1.getConnection)()];
+                case 1:
+                    connection = _a.sent();
+                    return [4 /*yield*/, connection.dropDatabase()];
                 case 2:
                     _a.sent();
                     return [2 /*return*/];

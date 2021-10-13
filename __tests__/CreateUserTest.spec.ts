@@ -1,4 +1,4 @@
-import { expect, describe, it, beforeAll, afterAll } from '@jest/globals'
+import { expect, describe, it, beforeAll } from '@jest/globals'
 import { CreateUserService } from '../src/services/CreateUserService'
 import { app } from '../src/app'
 import  createConnection  from '../src/database/index'
@@ -7,8 +7,6 @@ import  request  from 'supertest'
 describe("Create User", () => {
     beforeAll(async () => {
         const connection = await createConnection()
-
-        await connection.dropDatabase()
 
         await connection.runMigrations()
     })

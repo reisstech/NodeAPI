@@ -52,11 +52,8 @@ var supertest_1 = __importDefault(require("supertest"));
                 case 0: return [4 /*yield*/, (0, index_1.default)()];
                 case 1:
                     connection = _a.sent();
-                    return [4 /*yield*/, connection.dropDatabase()];
-                case 2:
-                    _a.sent();
                     return [4 /*yield*/, connection.runMigrations()];
-                case 3:
+                case 2:
                     _a.sent();
                     return [2 /*return*/];
             }

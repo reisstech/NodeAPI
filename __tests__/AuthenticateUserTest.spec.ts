@@ -1,15 +1,21 @@
-import { expect, describe, it, beforeAll } from '@jest/globals'
-
+import { expect, describe, it, beforeAll, afterAll } from '@jest/globals'
 import  createConnection  from '../src/database/index'
 
 import  request  from 'supertest'
 import { app } from '../src/app'
+import { getConnection } from 'typeorm'
 
 describe("Authenticated", () => {
     beforeAll(async () => {
         const connection = await createConnection()
        
         await connection.runMigrations()
+    })
+
+    afterAll(async () => {
+        const connection = await getConnection()
+
+        await connection.dropDatabase()
     })
 
     it("should be able to authenticate to the application", async () => {
