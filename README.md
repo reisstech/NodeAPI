@@ -19,7 +19,7 @@ Como forma de obter conhecimento, decidi criar um teste unitário para a aplica�
 
 * Clone o repositório
 * Rode yarn para baixar as dependências
-* Rode yarn typeorm migration:run para criar as tabelas do banco de dados. (Necessário ter o PostgreSQL instalado o usar o Docker conforme mostrado abaixo)
+* Rode yarn typeorm migration:run para criar as tabelas do banco de dados. (Necessário ter o PostgreSQL instalado o usar ou usar o Docker conforme mostrado abaixo)
 
 ```
 git clone https://github.com/reisstech/NodeAPI.git
