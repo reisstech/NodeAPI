@@ -1,7 +1,6 @@
 import { expect, describe, it, beforeAll, afterAll } from '@jest/globals'
 import { CreateUserService } from '../src/services/CreateUserService'
 import { app } from '../src/app'
-import { getConnection } from 'typeorm'
 import  createConnection  from '../src/database/index'
 import  request  from 'supertest'
 
@@ -14,13 +13,6 @@ describe("Create User", () => {
         await connection.runMigrations()
     })
 
-    // afterAll(async () => {
-    //     const connection = getConnection()
-
-    //     await connection.dropDatabase()
-
-    //     await connection.close()
-    // })
 
     it("Should be able to create a user", async () => {
         const response = await request(app).post('/users').send({

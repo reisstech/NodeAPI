@@ -62,11 +62,6 @@ var supertest_1 = __importDefault(require("supertest"));
             }
         });
     }); });
-    // afterAll(async () => {
-    //     const connection = getConnection()
-    //     await connection.dropDatabase()
-    //     await connection.close()
-    // })
     (0, globals_1.it)("Should be able to create a user", function () { return __awaiter(void 0, void 0, void 0, function () {
         var response;
         return __generator(this, function (_a) {

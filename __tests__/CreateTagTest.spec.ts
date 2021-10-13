@@ -1,15 +1,12 @@
 import { describe, it, expect, beforeAll, afterAll } from '@jest/globals'
 import createConnection from '../src/database'
-import { getConnection } from 'typeorm'
 import  request from 'supertest'
 import { app } from '../src/app'
 
 describe("Create Tag", () => {
     beforeAll(async () => {
         const connection = await createConnection()
-
-        //await connection.dropDatabase()
-        
+     
         await connection.runMigrations()
     })
 

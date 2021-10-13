@@ -48,15 +48,11 @@ var app_1 = require("../src/app");
         var connection;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, (0, database_1.default)()
-                    //await connection.dropDatabase()
-                ];
+                case 0: return [4 /*yield*/, (0, database_1.default)()];
                 case 1:
                     connection = _a.sent();
-                    //await connection.dropDatabase()
                     return [4 /*yield*/, connection.runMigrations()];
                 case 2:
-                    //await connection.dropDatabase()
                     _a.sent();
                     return [2 /*return*/];
             }

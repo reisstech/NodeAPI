@@ -48,25 +48,16 @@ var app_1 = require("../src/app");
         var connection;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, (0, index_1.default)()
-                    //await connection.dropDatabase()
-                ];
+                case 0: return [4 /*yield*/, (0, index_1.default)()];
                 case 1:
                     connection = _a.sent();
-                    //await connection.dropDatabase()
                     return [4 /*yield*/, connection.runMigrations()];
                 case 2:
-                    //await connection.dropDatabase()
                     _a.sent();
                     return [2 /*return*/];
             }
         });
     }); });
-    // afterAll(async () => {
-    //     const connection = getConnection()
-    //     await connection.dropDatabase()
-    //     await connection.close()
-    // })
     (0, globals_1.it)("should be able to authenticate to the application", function () { return __awaiter(void 0, void 0, void 0, function () {
         var user, userAuthenticatedToken;
         return __generator(this, function (_a) {
