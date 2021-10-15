@@ -2,6 +2,9 @@
 
 API Rest desenvolvida no evento NLW da Rocketseat.
 
+![Preview-Screens](https://github.com/reisstech/NodeAPI/blob/main/imgs_1.png)
+![Preview-Screens](https://github.com/reisstech/NodeAPI/blob/main/imgs_2.png) 
+
 # Projeto
 
 Como forma de obter conhecimento, decidi criar um teste unitário para a aplicação, criar uma pipeline no GitHub Actions e fazer o deploy automático no Heroku.
@@ -15,22 +18,25 @@ Como forma de obter conhecimento, decidi criar um teste unitário para a aplica�
 *  **GitHub Actions**
 * **Heroku**
 
+# Pré-Requisitos
+
+* Ter o PostgreSQL instalado e rodando na porta 5432 ou usar o Docker Compose.
+* Ter o NodeJs v+15 instalado ou usar o Docker Compose.
+
 # Como executar
 
 * Clone o repositório
 * Rode yarn para baixar as dependências
-* Rode yarn typeorm migration:run para criar as tabelas do banco de dados. (Necessário ter o PostgreSQL instalado o usar ou usar o Docker conforme mostrado abaixo)
-
+* Crie um arquivo .env na raiz do projeto com a seguinte informação:
 ```
-git clone https://github.com/reisstech/NodeAPI.git
-
-cd NodeAPI
-
-yarn
-
-yarn typeorm migration:run
+DATABASE_URL = postgres://postgres:postgres@localhost:5432/REST_API_NLW
 ```
+* Rode yarn typeorm migration:run para criar as tabelas do banco de dados.
+
+
+
 Caso queira rodar o ambiente dentro do Docker, fazer o seguinte:
+
 
 Alterar o arquivo docker-compose.yml e inserir o caminho do host que o Docker irá utilizar para montar os volumes dentro dos dois containers.
 
@@ -58,7 +64,7 @@ services:
 
 ```
 
-Rodar o comando abaixo na raiz do projeto. (É necessário ter o Docker Compose instalado) 
+Rodar o comando abaixo na raiz do projeto. 
 
 ```
 docker-compose up -d
@@ -89,5 +95,7 @@ Para executar os testes unitários:
 ```
 yarn test
 ```
+
+Caso queira testar as rotas da aplicação pode utilizar o Insomnia ou Postman.
 
 
