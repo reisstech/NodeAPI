@@ -1,4 +1,4 @@
-# API REST em NodeJs usando Express com teste unitário e deploy automático no Heroku.
+# API REST em NodeJs com teste unitário, CI usando o Action e deploy automático no Heroku.
 
 API Rest desenvolvida no evento NLW da Rocketseat.
 
@@ -9,7 +9,14 @@ A aplicação é uma plataforma para promover o conhecimento entre companheiros 
 
 # Projeto
 
-Como forma de obter conhecimento, decidi criar um teste unitário para a aplicação, criar uma pipeline no GitHub Actions e fazer o deploy automático no Heroku.
+Como forma de obter conhecimento, decidi adicionar na aplicação original:
+
+
+- [x] Um teste unitário para a API.
+- [x] Criar uma pipeline no GitHub Actions para fazer o Continuous Integration.
+- [x] Utilizar o Heroku para fazer o deploy automático da aplicação assim que houver um novo commit (Continuous Deployment)
+- [x] Utilizar o ambiente de desenvolvimento em Docker.
+
 
 ## Tecnologias usadas
 
@@ -17,6 +24,7 @@ Como forma de obter conhecimento, decidi criar um teste unitário para a aplica�
 * **TypeScript**
 *  **Express**
 *  **Jest**
+*  **Docker**
 *  **GitHub Actions**
 * **Heroku**
 
