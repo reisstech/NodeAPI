@@ -2,6 +2,8 @@
 
 API Rest desenvolvida no evento NLW da Rocketseat.
 
+A aplicação é uma plataforma para promover o conhecimento entre companheiros de equipe. 
+
 ![Preview-Screens](https://github.com/reisstech/NodeAPI/blob/main/imgs_1.png)
 ![Preview-Screens](https://github.com/reisstech/NodeAPI/blob/main/imgs_2.png) 
 
