@@ -1,4 +1,4 @@
-# API REST em NodeJs com teste unitário, CI usando o Action e deploy automático no Heroku.
+# API REST em NodeJs com teste unitário, CI com GitHub Action e deploy automático no Heroku.
 
 API Rest desenvolvida no evento NLW da Rocketseat.
 
