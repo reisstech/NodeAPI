@@ -15,7 +15,6 @@ Como forma de obter conhecimento, decidi adicionar na aplicação original:
 - [x] Um teste unitário para a API.
 - [x] Criar uma pipeline no GitHub Actions para fazer o Continuous Integration.
 - [x] Utilizar o Heroku para fazer o deploy automático da aplicação assim que houver um novo commit (Continuous Deployment)
-- [x] Utilizar o ambiente de desenvolvimento em Docker.
 
 
 ## Tecnologias usadas
