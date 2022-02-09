@@ -24,7 +24,6 @@ Como forma de obter conhecimento, decidi adicionar na aplicação original:
 * **TypeScript**
 *  **Express**
 *  **Jest**
-*  **Docker**
 *  **GitHub Actions**
 * **Heroku**
 
@@ -36,69 +35,17 @@ Como forma de obter conhecimento, decidi adicionar na aplicação original:
 # Como executar
 
 * Clone o repositório
-* Rode yarn para baixar as dependências
-* Crie um arquivo .env na raiz do projeto com a seguinte informação:
+* Rode "yarn" ou "npm install" para baixar as dependências
+* Necessário ter o PostegreSQL instalado e rodando na porta 5432
+* Crie um arquivo .env na raiz do projeto com o caminho/URL do seu PostgreSQL:
+
+Exemplo:
+
 ```
 DATABASE_URL = postgres://postgres:postgres@localhost:5432/REST_API_NLW
 ```
 * Rode yarn typeorm migration:run para criar as tabelas do banco de dados.
 
-
-
-Caso queira rodar o ambiente dentro do Docker, fazer o seguinte:
-
-
-Alterar o arquivo docker-compose.yml e inserir o caminho do host que o Docker irá utilizar para montar os volumes dentro dos dois containers.
-
-```
-version: '3.7'
-
-services:
-  api:
-    build: .
-    volumes: 
-      - <diretório_na_maquina_local>/NodeAPI:/app
-    ports: 
-      - "49160:3000"
-    depends_on: 
-      - postgres
-
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_PASSWORD: "postgres"
-    ports:
-      - "5432:5432"
-    volumes:
-      - <diretório_na_maquina_local>db_postgresql:/var/lib/postgresql/data
-
-```
-
-Rodar o comando abaixo na raiz do projeto. 
-
-```
-docker-compose up -d
-```
-Conforme especificado no docker-compose.yml, o Docker irá buildar a imagem do Node usando o arquivo Dockerfile abaixo:
-
-```
-FROM node:15-alpine
-
-WORKDIR /app
-
-COPY package*.json ./
-
- 
-RUN npm install 
-
-COPY . .
-
-EXPOSE 8080
-
-CMD ["yarn", "dev"]
-
-
-```
 
 Para executar os testes unitários:
 
