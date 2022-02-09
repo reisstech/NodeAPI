@@ -29,13 +29,13 @@ Como forma de obter conhecimento, decidi adicionar na aplicação original:
 # Pré-Requisitos
 
 * Ter o PostgreSQL rodando na porta 5432.
-* Ter o NodeJs v+15 instalado.
+* Ter o NodeJS Instalado.
 
 # Como executar
 
 * Clone o repositório
 * Rode "yarn" ou "npm install" para baixar as dependências
-* Necessário ter o PostegreSQL instalado e rodando na porta 5432
+
 * Crie um arquivo .env na raiz do projeto com o caminho/URL do seu PostgreSQL:
 
 Exemplo:
@@ -53,5 +53,11 @@ yarn test
 ```
 
 Caso queira testar as rotas da aplicação pode utilizar o Insomnia ou Postman.
+
+Para rodar em ambiente de desenvolvimento:
+
+```
+yarn test
+```
 
 
