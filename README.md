@@ -28,8 +28,8 @@ Como forma de obter conhecimento, decidi adicionar na aplicação original:
 
 # Pré-Requisitos
 
-* Ter o PostgreSQL instalado e rodando na porta 5432 ou usar o Docker Compose.
-* Ter o NodeJs v+15 instalado ou usar o Docker Compose.
+* Ter o PostgreSQL rodando na porta 5432.
+* Ter o NodeJs v+15 instalado.
 
 # Como executar
 
